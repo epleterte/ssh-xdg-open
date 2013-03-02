@@ -39,11 +39,11 @@ By default the ssh client will use your local username when logging in remotely 
 
 Add entries like these:
 
-Host *.domain
-  User username
-
-Host *.test.domain
-  User otherusername
+    Host *.domain
+      User username
+    
+    Host *.test.domain
+      User otherusername
 
 Using ProxyCommand is also a very good idea.
 
