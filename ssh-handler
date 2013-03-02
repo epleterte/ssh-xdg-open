@@ -1,0 +1,8 @@
+#!/bin/bash -ue
+# minimal ssh-handler
+
+dest=${1#ssh://}
+
+term="xterm"
+which urxvt >/dev/null && term="urxvt"
+${term} -e "ssh $dest " &
