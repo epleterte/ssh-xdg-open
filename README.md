@@ -10,25 +10,27 @@ installation
 ------------
 
 You can run the included install.sh
-  $ ./install.sh
+
+    $ ./install.sh
 
 ...or do it manually:
 
 Copy ssh.desktop to ~/.local/share/applications/
 
-  $ cp ssh.desktop ~/.local/share/applications/
+    $ cp ssh.desktop ~/.local/share/applications/
 
 add to mimeapps.list in ~/.local/share/applications/
 
-  $ [ -f ~/.local/share/applications/mimeapps.list ] && sed 1d mimeapps.list >> ~/.local/share/applications/mimeapps.list \
-  [ -f ~/.local/share/applications/mimeapps.list ] || cp mimeapps.list ~/.local/share/applications/
+    $ [ -f ~/.local/share/applications/mimeapps.list ] && sed 1d mimeapps.list >> ~/.local/share/applications/mimeapps.list \
+      [ -f ~/.local/share/applications/mimeapps.list ] || cp mimeapps.list ~/.local/share/applications/
 
 now xdg-open knows what to do when it encounters links of type 'ssh://my.remote.host'
 ...but we still need a handler! ssh.desktop defines 'ssh-handler', so you should put that in your path. I have mine in ~/bin/
 Use the included script, or modify it to your own needs.
 
 Now test with
-  $ xdg-open ssh://localhost
+
+    $ xdg-open ssh://localhost
 
 usage
 -----
