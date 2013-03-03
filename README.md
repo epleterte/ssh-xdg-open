@@ -37,7 +37,7 @@ usage
 
 By default the ssh client will use your local username when logging in remotely - use ~/.ssh/config extensively to get the most out of this. While you could find other mechanisms - i.e. if you have control of your web application and your environment you could render ssh hyperlinks with the right user for the given box/environment (or use the username of the logged in user) - I recommend using ~/.ssh/config for least pain and maximum flexibility.
 
-Add entries like these:
+Add entries like these to ~/ssh/config :
 
     Host *.domain
       User username

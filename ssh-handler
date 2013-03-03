@@ -11,7 +11,7 @@ terminals="urxvt xterm"
 
 function print_usage() {
   cat <<EOF
-Usage: ${0} [-h|-m <mode>] <ssh://my.remote.host>
+Usage: ${0} [-h|-c <command>-m <mode>] <ssh://my.remote.host>
   -h  This.
   -c  Command used to connect to remote host. Defaults to '$command'
   -m  Mode - tmux. Defaults to '$mode'
