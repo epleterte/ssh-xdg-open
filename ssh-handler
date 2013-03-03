@@ -1,8 +1,65 @@
 #!/bin/bash -ue
-# minimal ssh-handler
+# Christian Bryn <chr.bryn@gmail.com> 2013
+# ssh-handler with somewhat limited tmux capabilities
+# This script handles ssh hyperlinks (ssh://)
+# Passing hosts without the protocol prefix also works
+
+mode="default"
+command="ssh"
+
+function print_usage() {
+  cat <<EOF
+Usage: ${0} [-h|-m <mode>] <ssh://my.remote.host>
+  -h  This.
+  -c  Command used to log into remote host. Defaults to '$command'
+  -m  Mode - tmux. Defaults to '$mode'
+
+Examples:
+  ${0} ssh://my.remote.host
+  ${0} my.remote.host
+  ${0} -m tmux ssh://my.remote.host
+EOF
+}
+
+function tmux_open() {
+  # open new tmux window and run supplied command
+  # checks for a default running session called $USER,
+  # if not it starts a new one called 'ssh'
+  tmux_session=$USER
+  if ( tmux has-session -t "${tmux_session}" )
+  then
+    tmux new-window -t "${tmux_session}" "$@"
+  elif ( tmux has-session -t "ssh" )
+  then
+    tmux new-window -t "ssh" "$@"
+  else
+    #tmux -2 new-session -d -s ssh 
+    # split-window -d \; 
+    tmux -2 new-session -s ssh -d "$@" \; attach
+  fi
+}
+
+while getopts hcm o
+do
+  case $o in
+    h)
+      print_usage ; exit ;;
+    c)
+      command="$OPTARG" ;;
+    m)
+      mode="$OPTARG" ;;
+  esac
+done
+shift $(($OPTIND-1))
 
 dest=${1#ssh://}
 
-term="xterm"
-which urxvt >/dev/null && term="urxvt"
-${term} -e "ssh $dest " &
+case $mode in
+  tmux)
+    tmux_open "${command} ${dest}" ;;
+  default)
+    term="xterm"
+    which urxvt >/dev/null && term="urxvt"
+    ${term} -e "${command} ${dest} " & ;;
+esac
+
