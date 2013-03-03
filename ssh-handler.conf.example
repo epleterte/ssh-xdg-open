@@ -1,0 +1,3 @@
+mode="default"
+command="ssh"
+terminals="urxvt xterm"
