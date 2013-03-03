@@ -8,7 +8,16 @@ destdir=${prefix}/share/applications
 cp ssh.desktop "${destdir}/"
 if [ -f "${destdir}/mimeapps.list" ]
 then
-  sed 1d mimeapps.list >> "${destdir}/mimeapps.list"
+  if $(grep -q 'x-scheme-handler/ssh=ssh.desktop' ${destdir}/mimeapps.list )
+  then
+    echo "${destdir} appears to be set up already"
+  elif $(grep -q 'Desktop Applications' ${destdir}/mimeapps.list)
+  then
+    sed 1d mimeapps.list >> "${destdir}/mimeapps.list"
+  else
+    # meh
+    cat mimeapps.list >> "${destdir}/mimeapps.list"
+  fi
 else
   cp mimeapps.list "${destdir}/"
 fi
