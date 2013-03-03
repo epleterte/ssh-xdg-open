@@ -53,7 +53,7 @@ If you, like me, have a web application where server information is being docume
 
     <a href="ssh://remote.host">remote.host</a>
 
-I've slightly modified the [Racktables](http://racktables.org) interface for this, but it works equally well with any kind of Wiki / Puppet External Node Classifier UI ([Puppet Dashboard](https://puppetlabs.com/puppet/related-projects/dashboard/), [Foreman](http://theforeman.org/)) / Whatever.
+I've slightly modified the [Racktables](http://racktables.org) interface like this, but it works equally well with any kind of Wiki / Puppet External Node Classifier UI ([Puppet Dashboard](https://puppetlabs.com/puppet/related-projects/dashboard/), [Foreman](http://theforeman.org/)) / Whatever.
 
 tips are for trix
 -----------------
