@@ -16,6 +16,9 @@ Usage: ${0} [-h|-c <command>-m <mode>] <ssh://my.remote.host>
   -c  Command used to connect to remote host. Defaults to '$command'
   -m  Mode - tmux. Defaults to '$mode'
 
+Available modes:
+  default, tmux
+
 Examples:
   ${0} ssh://my.remote.host
   ${0} my.remote.host
