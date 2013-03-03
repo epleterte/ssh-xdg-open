@@ -1,9 +1,9 @@
 ssh-xdg-open :penguin:
 ============
 
-tids and bits needed to enable ssh-links (ssh://) in the web browser (Chromium, Firefox)
-  ...or any desktop application.
-  I found both tids and bits lying gently on the Internet, so thank you kindly Internets.
+tids and bits needed to enable ssh-links (ssh://) in the web browser (Chromium, Firefox)  
+...or any desktop application.  
+I found both tids and bits lying gently on the Internet, so thank you kindly Internets.
 
 
 installation
@@ -41,9 +41,9 @@ or
 
 ...or write your own ssh-handler script :smiley_cat:
 
-now xdg-open knows what to do when it encounters links of type 'ssh://my.remote.host'
-  ...but we still need a handler! ssh.desktop defines 'ssh-handler', so you should put that in your path. I have mine in ~/bin/
-  Use the included script, or modify it to your own needs.
+now xdg-open knows what to do when it encounters links of type 'ssh://my.remote.host'  
+...but we still need a handler! ssh.desktop defines 'ssh-handler', so you should put that in your path. I have mine in ~/bin/  
+Use the included script, or modify it to your own needs.
 
 Now test with
 
@@ -72,6 +72,7 @@ If you, like me, have a web application where server information is being docume
     <a href="ssh://remote.host">remote.host</a>
 
 I've slightly modified the [Racktables](http://racktables.org) interface like this, but it works equally well with any kind of Wiki / Puppet External Node Classifier UI ([Puppet Dashboard](https://puppetlabs.com/puppet/related-projects/dashboard/), [Foreman](http://theforeman.org/)) / Whatever.
+
 
 tips are for trix
 -----------------
