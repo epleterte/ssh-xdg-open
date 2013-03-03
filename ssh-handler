@@ -14,7 +14,7 @@ function print_usage() {
 Usage: ${0} [-h|-c <command>|-m <mode>] <ssh://my.remote.host>
   -h  This.
   -c  Command used to connect to remote host. Defaults to '$command'
-  -m  Mode - tmux. Defaults to '$mode'
+  -m  Mode. Defaults to '$mode'
 
 Available modes:
   default, tmux
