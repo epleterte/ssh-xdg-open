@@ -9,11 +9,18 @@ I found both tids and bits lying gently on the Internet, so thank you kindly Int
 installation
 ------------
 
-You can run the included install.sh
+You can run the included, primitive but interactive install.sh
 
     $ ./install.sh
 
-...or do it manually:
+Run with *-h* for options:
+
+    $ ./install.sh
+    Usage: ./install.sh [-h|-p <prefix]
+      -h  This.
+      -p  Install prefix. Defaults to /home/<username>/.local
+
+...or you can do it manually:
 
 Copy ssh.desktop to ~/.local/share/applications/
 
