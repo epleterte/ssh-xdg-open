@@ -1,10 +1,14 @@
 #!/bin/bash -ue
 
-destdir=~/.local/share/applications
+prefix=~/.local/
+destdir=${prefix}/share/applications
 
 [ -d "${destdir}" ] || mkdir -p "${destdir}"
 
 cp ssh.desktop "${destdir}/"
-[ -f "${destdir}/mimeapps.list" ] && sed 1d mimeapps.list >> "${destdir}/mimeapps.list" \
-  [ -f "${destdir}/mimeapps.list" ] || cp mimeapps.list "${destdir}/"
-
+if [ -f "${destdir}/mimeapps.list" ]
+then
+  sed 1d mimeapps.list >> "${destdir}/mimeapps.list"
+else
+  cp mimeapps.list "${destdir}/"
+fi
