@@ -5,7 +5,11 @@ tids and bits needed to enable ssh-links (ssh://) in the web browser (Chromium, 
 ...or any desktop application.  
 I found both tids and bits lying gently on the Internet, so thank you kindly Internets.
 
+[Installation](#installation)
+[Usage](#usage)
+[Tips](#tips)
 
+<a name="installation"/>
 installation
 ------------
 
@@ -47,7 +51,7 @@ Now test with
 
     $ xdg-open ssh://localhost
 
-
+<a name="usage"/>
 usage
 -----
 
@@ -81,6 +85,7 @@ If you, like me, have a web application where server information is being docume
 I've slightly modified the [Racktables](http://racktables.org) interface like this, but it works equally well with any kind of Wiki / Puppet External Node Classifier UI ([Puppet Dashboard](https://puppetlabs.com/puppet/related-projects/dashboard/), [Foreman](http://theforeman.org/)) / Whatever.
 
 
+<a name="tips"/>
 tips are for trix
 -----------------
 
