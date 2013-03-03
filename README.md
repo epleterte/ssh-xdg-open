@@ -15,7 +15,7 @@ You can run the included, primitive but interactive *install.sh*
 
 Run with *-h* for options:
 
-    $ ./install.sh
+    $ ./install.sh -h
     Usage: ./install.sh [-h|-p <prefix]
       -h  This.
       -p  Install prefix. Defaults to /home/<username>/.local
