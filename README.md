@@ -53,14 +53,14 @@ If you, like me, have a web application where server information is being docume
 
     <a href="ssh://remote.host">remote.host</a>
 
-I've slightly modified the Racktables interface for this, but it works equally well with any kind of Wiki / Puppet External Node Classifier UI / Whatever.
+I've slightly modified the [Racktables](http://racktables.org) interface for this, but it works equally well with any kind of Wiki / Puppet External Node Classifier UI ([Puppet Dashboard](https://puppetlabs.com/puppet/related-projects/dashboard/), [Foreman](http://theforeman.org/)) / Whatever.
 
 tips are for trix
 -----------------
 
-By default the ssh client will use your local username when logging in remotely - use ~/.ssh/config extensively to get the most out of this. While you could find other mechanisms - i.e. if you have control of your web application and your environment you could render ssh hyperlinks with the right user for the given box/environment (or use the username of the logged in user) - I recommend using ~/.ssh/config for least pain and maximum flexibility.
+By default the ssh client will use your local username when logging in remotely - use *~/.ssh/config* extensively to get the most out of this. While you could find other mechanisms - i.e. if you have control of your web application and your environment you could render ssh hyperlinks with the right user for the given box/environment (or use the username of the logged in user) - I recommend using *~/.ssh/config* for least pain and maximum flexibility.
 
-Add entries like these to ~/ssh/config :
+Add entries like these to *~/ssh/config* :
 
     Host *.domain
       User username
