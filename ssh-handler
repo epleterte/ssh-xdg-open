@@ -53,6 +53,7 @@ do
 done
 shift $(($OPTIND-1))
 
+[ $# -gt 0 ] || { echo 'No host URI given'; print_usage ; exit; }
 dest=${1#ssh://}
 
 case $mode in
