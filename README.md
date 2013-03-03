@@ -1,7 +1,7 @@
 ssh-xdg-open :penguin:
 ============
 
-tids and bits needed to enable ssh-links (ssh://) in the web browser (Chromium, Firefox)  
+tids and bits needed to enable ssh-links (*ssh://*) in the web browser (Chromium, Firefox)  
 ...or any desktop application.  
 I found both tids and bits lying gently on the Internet, so thank you kindly Internets.
 
@@ -9,7 +9,7 @@ I found both tids and bits lying gently on the Internet, so thank you kindly Int
 installation
 ------------
 
-You can run the included, primitive but interactive install.sh
+You can run the included, primitive but interactive *install.sh*
 
     $ ./install.sh
 
@@ -22,18 +22,18 @@ Run with *-h* for options:
 
 ...or you can do it manually:
 
-Copy ssh.desktop to ~/.local/share/applications/
+Copy *ssh.desktop* to *~/.local/share/applications/*
 
     $ cp ssh.desktop ~/.local/share/applications/
 
-Add to mimeapps.list in ~/.local/share/applications/
+Add to *mimeapps.list* in *~/.local/share/applications/*
 
     $ [ -f ~/.local/share/applications/mimeapps.list ] && sed 1d mimeapps.list >> ~/.local/share/applications/mimeapps.list \
       [ -f ~/.local/share/applications/mimeapps.list ] || cp mimeapps.list ~/.local/share/applications/
       
 
-Now xdg-open knows what to do when it encounters links of type 'ssh://my.remote.host'  
-...but we still need a handler! ssh.desktop defines 'ssh-handler', so you should put that in your path. I have mine in *~/bin/* (must be in your PATH)  
+Now xdg-open knows what to do when it encounters links of type *'ssh://my.remote.host'*  
+...but we still need a handler! *ssh.desktop* defines `ssh-handler`, so you should put that in your path. I have mine in *~/bin/* (must be in your PATH)  
 Use the included script:
 
     $ cp ssh-handler ~/bin/ && chmod +x ~/bin/ssh-handler
@@ -85,5 +85,5 @@ Add entries like these to *~/ssh/config* :
     Host *.test.domain
       User otherusername
 
-Using ProxyCommand is also a very good idea.
+Using *ProxyCommand* is also a very good idea.
 
