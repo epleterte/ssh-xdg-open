@@ -20,7 +20,7 @@ Run with *-h* for options:
       -h  This.
       -p  Install prefix. Defaults to /home/<username>/.local
 
-...or you can do it manually:
+...or you can do it manually. Files involved are *mimeapps.list*, *ssh.desktop* and *ssh-handler*:
 
 Copy *ssh.desktop* to *~/.local/share/applications/*
 
@@ -51,6 +51,8 @@ Now test with
 usage
 -----
 
+After having set up mimeapps.list and ssh.desktop, the rest is up to the ssh-handler script:
+
     Usage: ./ssh-handler [-h|-c <command>|-m <mode>] <ssh://my.remote.host>
       -h  This.
       -c  Command used to connect to remote host. Defaults to 'ssh'
@@ -64,6 +66,9 @@ usage
       ./ssh-handler my.remote.host
       ./ssh-handler -m tmux ssh://my.remote.host
       ./ssh-handler -c 'remmina -n --protocol=SSH -s'
+
+Currently there is no config file support, so changing parameters means changing the command in *ssh.desktop*  
+Config file support coming!
 
 If you, like me, have a web application where server information is being documented, you can now render ssh hyperlinks like so:
 
