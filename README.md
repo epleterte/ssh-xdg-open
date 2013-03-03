@@ -1,9 +1,9 @@
-ssh-xdg-open
+ssh-xdg-open :penguin:
 ============
 
 tids and bits needed to enable ssh-links (ssh://) in the web browser (Chromium, Firefox)
-...or any desktop application.
-I found both tids and bits lying gently on the Internet, so thank you kindly Internets.
+  ...or any desktop application.
+  I found both tids and bits lying gently on the Internet, so thank you kindly Internets.
 
 
 installation
@@ -42,12 +42,13 @@ or
 ...or write your own ssh-handler script :smiley_cat:
 
 now xdg-open knows what to do when it encounters links of type 'ssh://my.remote.host'
-...but we still need a handler! ssh.desktop defines 'ssh-handler', so you should put that in your path. I have mine in ~/bin/
-Use the included script, or modify it to your own needs.
+  ...but we still need a handler! ssh.desktop defines 'ssh-handler', so you should put that in your path. I have mine in ~/bin/
+  Use the included script, or modify it to your own needs.
 
 Now test with
 
     $ xdg-open ssh://localhost
+
 
 usage
 -----
