@@ -1,7 +1,7 @@
 ssh-xdg-open
 ============
 
-tids and bits needed to enable ssh-links (ssh://) in the web browser
+tids and bits needed to enable ssh-links (ssh://) in the web browser (Chromium, Firefox)
 ...or any desktop application.
 I found both tids and bits lying gently on the Internet, so thank you kindly Internets.
 
@@ -22,14 +22,24 @@ Run with *-h* for options:
 
 ...or you can do it manually:
 
-Copy ssh.desktop to ~/.local/share/applications/
+* Copy ssh.desktop to ~/.local/share/applications/
 
     $ cp ssh.desktop ~/.local/share/applications/
 
-add to mimeapps.list in ~/.local/share/applications/
+* Add to mimeapps.list in ~/.local/share/applications/
 
     $ [ -f ~/.local/share/applications/mimeapps.list ] && sed 1d mimeapps.list >> ~/.local/share/applications/mimeapps.list \
       [ -f ~/.local/share/applications/mimeapps.list ] || cp mimeapps.list ~/.local/share/applications/
+      
+* Copy ssh-handler to ~/bin/ (must be in your PATH)
+
+    $ cp ssh-handler ~/bin/ && chmod +x ~/bin/ssh-handler
+
+or
+
+    $ cp ssh-handler.minimal ~/bin/ssh-handler && chmod +x ~/bin/ssh-handler
+
+...or write your own ssh-handler script :smiley_cat:
 
 now xdg-open knows what to do when it encounters links of type 'ssh://my.remote.host'
 ...but we still need a handler! ssh.desktop defines 'ssh-handler', so you should put that in your path. I have mine in ~/bin/
