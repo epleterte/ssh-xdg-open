@@ -1,0 +1,2 @@
+- [x] basic tmux support
+- [ ] config file support
