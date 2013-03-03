@@ -6,7 +6,7 @@
 
 mode="default"
 command="ssh"
-# terminals in prioritized order, highest priority first
+# terminal emulators in prioritized order, highest priority first
 terminals="urxvt xterm"
 
 function print_usage() {
