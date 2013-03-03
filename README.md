@@ -53,22 +53,25 @@ usage
 
 After having set up mimeapps.list and ssh.desktop, the rest is up to the ssh-handler script:
 
-    Usage: ./ssh-handler [-h|-c <command>|-m <mode>] <ssh://my.remote.host>
+    Usage: ./ssh-handler [-h|-c <command>|-m <mode>|-t '<terminal> [<terminal>]'] <ssh://my.remote.host>
       -h  This.
       -c  Command used to connect to remote host. Defaults to 'ssh'
       -m  Mode. Defaults to 'default'
-
+      -t  Space separates list of terminal emulators. Defaults to 'urxvt xterm'
+    
     Available modes:
       default, tmux
+    
+    The following variables can be set in /home/<username>/.ssh-handler.conf:
+      mode=default
+      command=ssh
     
     Examples:
       ./ssh-handler ssh://my.remote.host
       ./ssh-handler my.remote.host
       ./ssh-handler -m tmux ssh://my.remote.host
       ./ssh-handler -c 'remmina -n --protocol=SSH -s'
-
-Currently there is no config file support, so changing parameters means changing the command in *ssh.desktop*  
-Config file support coming!
+      ./ssh-handler -t 'gnome-terminal xterm'
 
 If you, like me, have a web application where server information is being documented, you can now render ssh hyperlinks like so:
 
