@@ -6,18 +6,21 @@
 
 mode="default"
 command="ssh"
+# terminals in prioritized order, highest priority first
+terminals="urxvt xterm"
 
 function print_usage() {
   cat <<EOF
 Usage: ${0} [-h|-m <mode>] <ssh://my.remote.host>
   -h  This.
-  -c  Command used to log into remote host. Defaults to '$command'
+  -c  Command used to connect to remote host. Defaults to '$command'
   -m  Mode - tmux. Defaults to '$mode'
 
 Examples:
   ${0} ssh://my.remote.host
   ${0} my.remote.host
   ${0} -m tmux ssh://my.remote.host
+  ${0} -c 'remmina -n --protocol=SSH -s'
 EOF
 }
 
@@ -33,8 +36,6 @@ function tmux_open() {
   then
     tmux new-window -t "ssh" "$@"
   else
-    #tmux -2 new-session -d -s ssh 
-    # split-window -d \; 
     tmux -2 new-session -s ssh -d "$@" \; attach
   fi
 }
@@ -58,8 +59,12 @@ case $mode in
   tmux)
     tmux_open "${command} ${dest}" ;;
   default)
-    term="xterm"
-    which urxvt >/dev/null && term="urxvt"
-    ${term} -e "${command} ${dest} " & ;;
+    for t in $terminals
+    do
+      which $t >/dev/null || continue
+      ${t} -e "${command} ${dest} " &
+      break
+    done
+    ;;
 esac
 
