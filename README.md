@@ -57,7 +57,7 @@ usage
       -m  Mode. Defaults to 'default'
 
     Available modes:
-    default, tmux
+      default, tmux
     
     Examples:
       ./ssh-handler ssh://my.remote.host
