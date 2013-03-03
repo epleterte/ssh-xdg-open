@@ -51,7 +51,7 @@ Now test with
 usage
 -----
 
-    Usage: ./ssh-handler [-h|-c <command>-m <mode>] <ssh://my.remote.host>
+    Usage: ./ssh-handler [-h|-c <command>|-m <mode>] <ssh://my.remote.host>
       -h  This.
       -c  Command used to connect to remote host. Defaults to 'ssh'
       -m  Mode. Defaults to 'default'
