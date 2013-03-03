@@ -5,8 +5,8 @@ tids and bits needed to enable ssh-links (ssh://) in the web browser (Chromium, 
 ...or any desktop application.  
 I found both tids and bits lying gently on the Internet, so thank you kindly Internets.
 
-[Installation](#installation)
-[Usage](#usage)
+[Installation](#installation)  
+[Usage](#usage)  
 [Tips](#tips)
 
 <a name="installation"/>
