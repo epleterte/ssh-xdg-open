@@ -1,7 +1,7 @@
 ssh-xdg-open :penguin:
 ============
 
-tids and bits needed to enable ssh-links (*ssh://*) in the web browser (Chromium, Firefox)  
+tids and bits needed to enable ssh-links (ssh://) in the web browser (Chromium, Firefox)  
 ...or any desktop application.  
 I found both tids and bits lying gently on the Internet, so thank you kindly Internets.
 
