@@ -22,28 +22,26 @@ Run with *-h* for options:
 
 ...or you can do it manually:
 
-* Copy ssh.desktop to ~/.local/share/applications/
+Copy ssh.desktop to ~/.local/share/applications/
 
     $ cp ssh.desktop ~/.local/share/applications/
 
-* Add to mimeapps.list in ~/.local/share/applications/
+Add to mimeapps.list in ~/.local/share/applications/
 
     $ [ -f ~/.local/share/applications/mimeapps.list ] && sed 1d mimeapps.list >> ~/.local/share/applications/mimeapps.list \
       [ -f ~/.local/share/applications/mimeapps.list ] || cp mimeapps.list ~/.local/share/applications/
       
-* Copy ssh-handler to ~/bin/ (must be in your PATH)
+
+Now xdg-open knows what to do when it encounters links of type 'ssh://my.remote.host'  
+...but we still need a handler! ssh.desktop defines 'ssh-handler', so you should put that in your path. I have mine in *~/bin/* (must be in your PATH)  
+Use the included script:
 
     $ cp ssh-handler ~/bin/ && chmod +x ~/bin/ssh-handler
-
 or
 
     $ cp ssh-handler.minimal ~/bin/ssh-handler && chmod +x ~/bin/ssh-handler
 
 ...or write your own ssh-handler script :smiley_cat:
-
-now xdg-open knows what to do when it encounters links of type 'ssh://my.remote.host'  
-...but we still need a handler! ssh.desktop defines 'ssh-handler', so you should put that in your path. I have mine in ~/bin/  
-Use the included script, or modify it to your own needs.
 
 Now test with
 
