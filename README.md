@@ -63,8 +63,9 @@ After having set up mimeapps.list and ssh.desktop, the rest is up to the ssh-han
       default, tmux
     
     The following variables can be set in /home/<username>/.ssh-handler.conf:
-      mode=default
-      command=ssh
+      mode="default"
+      command="ssh"
+      terminals="urxvt xterm"
     
     Examples:
       ./ssh-handler ssh://my.remote.host

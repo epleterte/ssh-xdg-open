@@ -23,8 +23,9 @@ Available modes:
   default, tmux
 
 The following variables can be set in ${config_file}:
-  mode=${mode}
-  command=${command}
+  mode="${mode}"
+  command="${command}"
+  terminals="$terminals"
 
 Examples:
   ${0} ssh://my.remote.host
