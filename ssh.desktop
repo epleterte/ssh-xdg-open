@@ -1,4 +1,4 @@
 [Desktop Entry]
 Terminal=false
 Type=Application
-Exec=ssh-handler %F
+Exec=ssh-handler %U
