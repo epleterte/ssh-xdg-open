@@ -10,6 +10,7 @@ I found both tids and bits lying gently on the Internet, so thank you kindly Int
 [Tips](#tips)
 
 <a name="installation"/>
+
 installation
 ------------
 
@@ -52,6 +53,7 @@ Now test with
     $ xdg-open ssh://localhost
 
 <a name="usage"/>
+
 usage
 -----
 
@@ -86,6 +88,7 @@ I've slightly modified the [Racktables](http://racktables.org) interface like th
 
 
 <a name="tips"/>
+
 tips are for trix
 -----------------
 
